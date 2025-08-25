@@ -236,7 +236,6 @@ describe('A11y checks - key pages', () => {
 * Failure screenshots: `cypress/screenshots/`
 * Example run command used for submission: `npm run cy:run`
 
-Include these folders and this README in your GitHub repository. Optionally add a short demo screen recording of a GUI run from `npm run cy:open`.
 
 ---
 
@@ -250,4 +249,4 @@ Include these folders and this README in your GitHub repository. Optionally add 
 
 ## Credits
 
-Created by Marlon Logan for the QA Capstone project. Tests target the public demo at saucedemo.com for educational purposes only.
+Created by Marlon Logan for the QA Capstone project. Tests target the public demo at saucedemo.com 
