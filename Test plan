@@ -1,0 +1,149 @@
+capstone-qa-project/
+ ├─ README.md
+ ├─ test-plan/
+ │   └─ TestPlan.md# 📝 Test Plan – Capstone QA Project
+
+## 1. Introduction
+This test plan defines the QA strategy for testing the **Saleor Demo Storefront** application and its associated GraphQL API.  
+The objective is to ensure functional correctness, performance, accessibility, and user experience quality across web and mobile environments.
+
+---
+
+## 2. Scope
+### In-Scope:
+- User Registration and Authentication  
+- Product Search  
+- Add/Remove Items from Cart  
+- Checkout Flow  
+- GraphQL API validation for products and cart  
+
+### Out of Scope:
+- Payment gateway integration (simulated, not real)  
+- Third-party plugins  
+
+---
+
+## 3. Objectives
+- Verify **core functionality** of the Saleor Storefront  
+- Validate **API responses** against expected schema  
+- Measure **performance** under load conditions  
+- Ensure **accessibility compliance** with WCAG guidelines  
+
+---
+
+## 4. Test Strategy
+### Manual Testing:
+- Exploratory and scenario-based testing  
+- Functional flows: registration, search, add-to-cart, checkout  
+
+### Automated Testing:
+- **Cypress E2E**: login, search, checkout  
+- **Cross-browser**: Chrome, Firefox  
+- **Mobile responsive**: iPhone, Pixel viewports  
+- **API tests**: GraphQL queries validation  
+- **Accessibility**: Axe plugin  
+- **Performance**: Lighthouse scores  
+
+---
+
+## 5. Test Environments
+- **Web:** Desktop + Mobile (Chrome, Firefox)  
+- **Mobile:** iPhone 12, Pixel 5 (simulated in Cypress)  
+- **API:** Saleor GraphQL endpoint – [https://demo.saleor.io/graphql/](https://demo.saleor.io/graphql/)  
+
+---
+
+## 6. Tools
+- **Test Management:** Jira (defect logging & tracking)  
+- **Automation:** Cypress  
+- **Accessibility:** Axe plugin  
+- **Performance:** Lighthouse plugin  
+- **Reporting:** Cypress Dashboard (if available)  
+
+---
+
+## 7. Test Cases (High-Level)
+| ID  | Test Case Description | Expected Result | Type |
+|-----|----------------------|-----------------|------|
+| TC01 | User Registration with valid data | Account created successfully | Manual |
+| TC02 | Login with valid credentials | User redirected to dashboard | Manual |
+| TC03 | Search for product | Correct product list displayed | Manual + Automated |
+| TC04 | Add/Remove product from cart | Cart updates correctly | Manual + Automated |
+| TC05 | Checkout flow with sample data | Order placed successfully | Automated |
+| TC06 | GraphQL product query | API returns valid schema | Automated |
+| TC07 | Accessibility check on homepage | No critical Axe violations | Automated |
+| TC08 | Lighthouse performance audit | Score ≥ 80 on key pages | Automated |
+
+---
+
+## 8. Deliverables
+- `manual-testing/TestCases_Web.md` – Test cases (web)  
+- `manual-testing/TestCases_Mobile.md` – Test cases (mobile)  
+- `manual-testing/TestResults.md` – Results of manual execution  
+- `cypress/e2e/*.cy.js` – Automated test scripts  
+- `jira/defects.md` – Defects log  
+
+---
+
+## 9. Exit Criteria
+- All **critical defects resolved**  
+- 90%+ **test case pass rate**  
+- Performance scores meet benchmarks  
+- Accessibility violations remediated  
+
+---
+
+## 10. Risks & Mitigations
+- **Risk:** API downtime may block test execution  
+  - **Mitigation:** Mock responses for critical flows  
+- **Risk:** Cross-browser inconsistencies  
+  - **Mitigation:** Include at least 2 browsers (Chrome + Firefox)  
+
+--- 
+
+  
+---
+
+## 7. Test Cases (High-Level)
+| ID  | Test Case Description | Expected Result | Type |
+|-----|----------------------|-----------------|------|
+| TC01 | User Registration with valid data | Account created successfully | Manual |
+| TC02 | Login with valid credentials | User redirected to dashboard | Manual |
+| TC03 | Search for product | Correct product list displayed | Manual + Automated |
+| TC04 | Add/Remove product from cart | Cart updates correctly | Manual + Automated |
+| TC05 | Checkout flow with sample data | Order placed successfully | Automated |
+| TC06 | GraphQL product query | API returns valid schema | Automated |
+| TC07 | Accessibility check on homepage | No critical Axe violations | Automated |
+| TC08 | Lighthouse performance audit | Score ≥ 80 on key pages | Automated |
+
+---
+
+## 8. Deliverables
+- `manual-testing/TestCases_Web.md` – Test cases (web)  
+- `manual-testing/TestCases_Mobile.md` – Test cases (mobile)  
+- `manual-testing/TestResults.md` – Results of manual execution  
+- `cypress/e2e/*.cy.js` – Automated test scripts  
+- `jira/defects.md` – Defects log  
+
+---
+
+## 9. Exit Criteria
+- All **critical defects resolved**  
+- 90%+ **test case pass rate**  
+- Performance scores meet benchmarks  
+- Accessibility violations remediated  
+
+---
+
+## 10. Risks & Mitigations
+- **Risk:** API downtime may block test execution  
+  - **Mitigation:** Mock responses for critical flows  
+- **Risk:** Cross-browser inconsistencies  
+  - **Mitigation:** Include at least 2 browsers (Chrome + Firefox)  
+
+---
+
+## 11. Approval
+- **QA Tester:** Marlon Logan  
+
+
